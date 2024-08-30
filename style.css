@@ -61,13 +61,21 @@ div {
 	background-color: ivory;
 }
 .hiddenKeyLetter:active {
-    background-color: lightgray;
+	background-color: lightgray;
 }
 .hiddenDarkLetter {
 	background-color: darkgray;
 }
 .hiddenDarkLetter:active {
-    background-color: darkslategrey;
+	background-color: darkslategrey;
+}
+audio {
+	height: 100%;
+	width: 100%;
+	border: 1px solid black;
+	bottom: 0;
+	position: relative;
+	opacity: 0;
 }
 /* Line break */
 
