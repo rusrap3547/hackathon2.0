@@ -1,6 +1,5 @@
 body {
 	background-color: lightblue;
-	background-image: url(https://science.nasa.gov/wp-content/uploads/2023/09/swift_M31_mosaic_1600.webp?w=1600);
 }
 div {
 	border: 1px solid black;
@@ -13,13 +12,16 @@ div {
 	margin: 5px;
 	height: 50vh;
 	width: 100%;
-	/* gap: 5px; */
+	gap: 5px;
+	border: 2px solid whitesmoke;
+	border-radius: 10%;
+	background-color: black;
+	background-image: conic-gradient(black, blue, black, green, black, yellow, black, red, black);
 }
-
 #pianoBox {
 	display: grid;
 	grid-template-columns: repeat(30, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows: repeat(10, 1fr);
 	margin-top: 30px;
 	margin-bottom: 30px;
 	height: 45vh;
@@ -31,43 +33,94 @@ div {
 .hiddenLetterSpace {
 	background-color: darkslategray;
 }
-.hiddenLetter {
-	background-color: lightgray;
-	color: lightgray;
-	font-size: xx-large;
-}
+
 .hiddenLetter:hover {
-	color: black;
 	animation: none;
+	background-color: black;
+	color: white;
 }
 .hiddenLetter {
-	animation: stayBlack 10s forwards;
+	border-radius: 25px;
+	font-size: xx-large;
+	text-align: center;
+	animation: stayBlack 5s forwards;
 }
+
 .outerBorderLine {
-	background-color: black;
+	background-color: ivory;
+	border: none;
+}
+.musicalFont {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow: hidden;
 }
 @keyframes stayBlack {
 	0% {
-		color: black;
+		color: white;
+		background-color: black;
+		background-image: none;
 	}
 	100% {
-		color: lightgray;
+		color: white;
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		background-color: white;
 	}
+}
+.outerBorderLine,
+.musicalFont {
+	font-family: "Noto Music";
+	font-weight: 400;
+	font-style: normal;
+	background-color: ivory;
+}
+
+/* Secret Text box!! */
+
+#superSecretMessage {
+	border: none;
+	margin-top: 10px;
+	font-size: 18px;
+	color: ivory;
+}
+p,
+#superSecretMessage:hover {
+	display: block;
+	color: black;
+}
+input[type="checkbox"] {
+	display: none;
+}
+label {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: darkslategray;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+input[type="checkbox"]:checked ~ #superSecretMessage {
+	color: black;
 }
 
 /* Piano box Groupings */
 
 .hiddenKeyLetter {
 	background-color: ivory;
+	border-bottom: 5px solid ivory;
 }
 .hiddenKeyLetter:active {
 	background-color: lightgray;
 }
 .hiddenDarkLetter {
-	background-color: darkgray;
+	background-color: rgb(44, 44, 44);
+	padding-left: 20px;
 }
 .hiddenDarkLetter:active {
-	background-color: darkslategrey;
+	background-color: black;
 }
 audio {
 	height: 100%;
@@ -81,28 +134,39 @@ audio {
 
 /* These are the single target hidden message CSS */
 
+#sheetMusicSide {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	height: fit-content;
+	width: fit-content;
+}
 #topBlackLine {
 	grid-column: 1/14;
 	grid-row: 1/2;
+	opacity: 0;
 }
 #bottomBlackLine {
 	grid-column: 1/14;
 	grid-row: 9/10;
+	opacity: 0;
 }
 #leftBlackLine {
 	grid-column: 1/2;
 	grid-row: 1/10;
+	opacity: 0;
 }
 #rightBlackLine {
 	grid-column: 13/14;
 	grid-row: 1/10;
+	opacity: 0;
 }
 #topSpaceHolder {
-	grid-column: 1/12;
+	grid-column: 2/11;
 	grid-row: 3/5;
 }
 #bottomSpaceHolder {
-	grid-column: 1/12;
+	grid-column: 2/11;
 	grid-row: 6/8;
 }
 #middleSpaceHolder {
@@ -117,102 +181,105 @@ audio {
 
 /* This is the single target Piano CSS */
 #lowFKey {
-	grid-row: 1/5;
+	grid-row: 1/11;
 	grid-column: 1/3;
 }
 #lowFsharpKey {
 	grid-column: 2/3;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #lowGKey {
 	grid-column: 3/5;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #lowGSharpKey {
 	grid-column: 4/5;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #lowAKey {
 	grid-column: 5/7;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #lowASharpKey {
 	grid-column: 6/7;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #lowBKey {
 	grid-column: 7/9;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #lowCKey {
 	grid-column: 9/11;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #lowCSharpKey {
 	grid-column: 10/11;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #lowDKey {
 	grid-column: 11/13;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #lowDSharpKey {
 	grid-column: 12/13;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #lowEKey {
 	grid-column: 13/15;
-	grid-row: 1/5;
+	grid-row: 1/11;
+}
+#lowEKey:active {
+	transform: skewX(15deg);
 }
 #FKey {
 	grid-column: 15/17;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #fSharpKey {
 	grid-column: 16/17;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #Gkey {
 	grid-column: 17/19;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #GSharpKey {
 	grid-column: 18/19;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #aKey {
 	grid-column: 19/21;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #ASharpKey {
 	grid-column: 20/21;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #bKey {
 	grid-column: 21/23;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #cKey {
 	grid-column: 23/25;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #cSharpKey {
 	grid-column: 24/25;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #dKey {
 	grid-column: 25/27;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #dSharpKey {
 	grid-column: 26/27;
-	grid-row: 1/3;
+	grid-row: 1/7;
 }
 #eKey {
 	grid-column: 27/29;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }
 #highFKey {
 	grid-column: 29/31;
-	grid-row: 1/5;
+	grid-row: 1/11;
 }

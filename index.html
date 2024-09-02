@@ -3,11 +3,24 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&family=Noto+Music&display=swap"
+			rel="stylesheet" />
+		<link
 			rel="stylesheet"
 			href="style.css" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Music&display=swap"
+			rel="stylesheet" />
 		<title>August Hackathon</title>
 	</head>
 	<body>
@@ -130,7 +143,12 @@
 				</div>
 				<div
 					id="space7holder"
-					class="hiddenLetterSpace"></div>
+					class="hiddenLetterSpace">
+					<input
+						type="checkbox"
+						id="secretToggle" />
+					<label for="secretToggle">Hee Hee</label>
+				</div>
 				<div
 					id="space3holder"
 					class="hiddenLetterSpace"></div>
@@ -197,13 +215,39 @@
 				</div>
 				<div
 					id="topSpaceHolder"
-					class="outerBorderLine"></div>
+					class="outerBorderLine"
+					class="musicalFont">
+					<p>
+						Good morning, My name is Russ and I'm going to show you my perfect day &#x1D15D; &#x1D11E;
+						&#x1D160; &#x1D122; I am most happy when it comes to cryptography. So I set up my Hackathon
+						project with 4 hidden messages. Nothing too big but I wanted to give you some of the joy I find
+						in solving problems with nothing but your mind extremely relaxing.
+					</p>
+				</div>
 				<div
 					id="bottomSpaceHolder"
-					class="outerBorderLine"></div>
+					class="outerBorderLine musicalFont">
+					<div id="superSecretMessage">
+						This is the hidden text that gets revealed when the button is clicked!
+					</div>
+				</div>
 				<div
 					id="middleSpaceHolder"
-					class="outerBorderLine"></div>
+					class="outerBorderLine"
+					class="musicalFont">
+					<p
+						class="musicalFont"
+						id="sheetMusicSide">
+						&#x1D11E; &#x1D160; &#x1D157; &#x1D15D; &#x1D15E; &#x1D158; &#x1D15F; &#x1D15A; &#x1D15C;
+						&#x1D161; &#x1D11F; &#x1D15B; &#x1D162; &#x1D163; &#x1D164; &#x1D12B; &#x1D120; &#x1D122;
+						&#x1D12A; &#x1D125; &#x1D150; &#x1D151; &#x1D152; &#x1D153; &#x1D154; &#x1D155; &#x1D156;
+						&#x1D158; &#x1D159; &#x1D15A; &#x1D15B; &#x1D15C; &#x1D15D; &#x1D15E; &#x1D15F; &#x1D160;
+						&#x1D161; &#x1D162; &#x1D163; &#x1D164; &#x1D11E; &#x1D160; &#x1D157; &#x1D15D; &#x1D15E;
+						&#x1D158; &#x1D15F; &#x1D15A; &#x1D15C; &#x1D161; &#x1D11F; &#x1D15B; &#x1D162; &#x1D163;
+						&#x1D164; &#x1D12B; &#x1D120; &#x1D122; &#x1D12A; &#x1D125; &#x1D150; &#x1D151; &#x1D152;
+						&#x1D153; &#x1D154; &#x1D155; &#x1D156; &#x1D158; &#x1D159; &#x1D15A;
+					</p>
+				</div>
 			</div>
 			<div id="pianoBox">
 				<audio src=""></audio>
@@ -291,7 +335,7 @@
 					id="lowEKey"
 					class="hiddenKeyLetter">
 					<audio
-						src="audiofolders/E1.mp3"
+						src="audiofolders/MAKE IT WORK Tim Gunn-[AudioTrimmer.com] (1).mp3"
 						controls></audio>
 				</div>
 				<!-- Broken Key -->
